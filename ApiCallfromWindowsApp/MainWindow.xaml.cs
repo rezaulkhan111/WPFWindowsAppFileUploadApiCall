@@ -44,34 +44,7 @@ namespace ApiCallfromWindowsApp
 
         private async void Btn_post_data_Click(object sender, RoutedEventArgs e)
         {
-            //HttpClient client = new HttpClient();
-
-            //client.BaseAddress = new Uri("http://localhost:12789/");
-
-
-
-            //client.DefaultRequestHeaders.Accept.Add(
-
-            //   new MediaTypeWithQualityHeaderValue("application/json"));
-
-            //obj = new TestModelClass();
-            //obj.Id = int.Parse(tb_id.Text);
-            //obj.Name = tb_name.Text;
-            //if (dlg != null)
-            //{
-            //    //obj.formFile = dlg.FileName;
-            //}
-            ////employee.Name = txtName.Text;
-
-            ////employee.Address = txtAddress.Text;
-
-            ////employee.Designation = txtDesignation.Text;
-
-
-
-            //var response = client.PostAsJsonAsync("api/employee", employee).Result;
-
-            obj = new TestModelClass();
+           obj = new TestModelClass();
 
             if (dlg != null)
             {
@@ -99,34 +72,6 @@ namespace ApiCallfromWindowsApp
                     }
                 }
             }
-
-            //using (var httpClient = new HttpClient())
-            //{
-
-            //    using (var content = new MultipartFormDataContent())
-            //    {
-
-            //        byte[] Bytes = new byte[dlg.FileName.Length + 1];
-            //        var fileContent = new ByteArrayContent(Bytes);
-
-            //        //content.Headers.ContentType = new MediaTypeHeaderValue("multipart/form-data");
-
-            //        content.Add(new StringContent(Convert.ToString(tb_id.Text)), "Id");
-            //        content.Add(new StringContent(Convert.ToString(tb_name.Text)), "Name");
-
-            //        fileContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment") { FileName = obj.formFile.FileName };
-
-            //        content.Add(fileContent);
-
-            //        using (var response = await httpClient.PostAsync("https://localhost:44366/weatherforecast/UploadModelFiles", content))
-            //        {
-            //            string apiResponse = await response.Content.ReadAsStringAsync();
-            //            //receivedReservation = JsonConvert.DeserializeObject<TestModelClass>(apiResponse);
-            //        }
-            //    }
-            //}
-
-
         }
     }
 }
