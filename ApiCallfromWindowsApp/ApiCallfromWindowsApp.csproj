@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IppDotNetSdkForQuickBooksApiV3" Version="10.0.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.1" />
+  </ItemGroup>
+
+</Project>

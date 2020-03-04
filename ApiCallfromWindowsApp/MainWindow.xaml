@@ -1,0 +1,15 @@
+﻿<Window x:Class="ApiCallfromWindowsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ApiCallfromWindowsApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="tb_id" HorizontalAlignment="Left" Margin="219,92,0,0" Text="Id" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tb_name" HorizontalAlignment="Left" Margin="219,125,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btn_select_file" Content="Select File" HorizontalAlignment="Left" Margin="219,159,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.098,0.309" Width="120" Click="Btn_select_file_Click"/>
+        <Button x:Name="btn_post_data" Content="Post Data in Api" HorizontalAlignment="Left" Margin="184,245,0,0" VerticalAlignment="Top" Width="155" Height="51" Click="Btn_post_data_Click"/>
+    </Grid>
+</Window>
