@@ -55,14 +55,11 @@ namespace ApiCallfromWindowsApp
                     {
                         obj.Id = int.Parse(tb_id.Text);
                         obj.Name = tb_name.Text;
-                        FileStream fileStream = File.OpenRead(dlg.FileName);
-                        HttpContent fileStreamContent = new StreamContent(fileStream);
 
                         content.Add(new StringContent(Convert.ToString(obj.Id)), "Id");
                         content.Add(new StringContent(Convert.ToString(obj.Name)), "Name");
-                        fileStreamContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data") { Name = "formFiles", FileName = fileName };
-                        fileStreamContent.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
-
+                        fileStreamContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment") { Name = "formFiles", FileName = fileName };
+                    
                         content.Add(fileStreamContent);
 
                         using (var response = await httpClient.PostAsync("https://localhost:44359/weatherforecast/UploadModelFiles", content))
